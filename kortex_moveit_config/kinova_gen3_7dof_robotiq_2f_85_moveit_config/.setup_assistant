@@ -1,7 +1,7 @@
 moveit_setup_assistant_config:
   urdf:
     package: kortex_description
-    relative_path: robots/gen3.xacro
+    relative_path: robots/gen3_bimanual_left.xacro
     xacro_args:
       gripper:=robotiq_2f_85
       dof:=7

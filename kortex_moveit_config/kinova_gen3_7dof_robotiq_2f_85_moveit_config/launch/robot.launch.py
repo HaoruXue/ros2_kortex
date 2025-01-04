@@ -71,14 +71,14 @@ def launch_setup(context, *args, **kwargs):
         ],
     )
 
-    # Static TF
-    static_tf = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="static_transform_publisher",
-        output="log",
-        arguments=["--frame-id", "world", "--child-frame-id", "base_link"],
-    )
+    # # Static TF
+    # static_tf = Node(
+    #     package="tf2_ros",
+    #     executable="static_transform_publisher",
+    #     name="static_transform_publisher",
+    #     output="log",
+    #     arguments=["--frame-id", "world", "--child-frame-id", "base_link"],
+    # )
 
     # Publish TF
     robot_state_publisher = Node(
@@ -182,7 +182,7 @@ def launch_setup(context, *args, **kwargs):
         robot_hand_controller_spawner,
         fault_controller_spawner,
         move_group_node,
-        static_tf,
+        # static_tf,
     ]
 
     return nodes_to_start
